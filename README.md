@@ -3,7 +3,7 @@ Minimal docker wordpress with nginx and php-fpm without bd
 
 Your need docker and docker-compose in your operation system.
 
-Clone: git clone https://github.com/codesshaman/docker_wordpress_php_mysql_alpine.git
+Clone: https://github.com/codesshaman/docker_wordpress_nginx_php_alpine.git
 
 GO TO FOLDER:
 cd docker_wordpress_php_mysql_alpine

@@ -8,8 +8,13 @@ Clone: git clone https://github.com/codesshaman/docker_wordpress_nginx_php_alpin
 GO TO FOLDER:
 cd docker_wordpress_php_mysql_alpine
 
+GET WORDPRESS:
+Get wordpres from official websyte:
+wget https://wordpress.org/latest.tar.gz
+or use archive from this repository
+
 UNZIP:
-unzip wordpress.zip
+tar -xf latest.tar.gz
 
 BUILD (first start):
 docker-compose up -d --build

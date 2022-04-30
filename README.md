@@ -3,7 +3,7 @@ Minimal docker wordpress with nginx, mariadb and php-fpm configuration
 
 Your need docker and docker-compose in your operation system.
 
-Clone: git clone https://github.com/codesshaman/docker_wordpress_nginx_php_alpine.git
+Clone: git clone https://github.com/codesshaman/docker_wordpress_mariadb_nginx_php_alpine.git
 
 GO TO FOLDER:
 

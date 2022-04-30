@@ -28,6 +28,12 @@ docker exec -it wordpress_nginx sh
 OPEN:
 http://localhost/
 
+WORDPRESS INSTALL:
+
+Use dbname, username and password from mysql service enviroment in file docker-compose.yml.
+
+Change this enviroment variables to set your names and password.
+
 Docker create folder mysql/data with mariadb data and mysql/logs for mariadb logs
 
 Docker create folder "wordpress" with all wordpress files.

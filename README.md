@@ -1,5 +1,5 @@
-# wordpress + nginx docker configuration
-Minimal docker wordpress with nginx and php-fpm without bd
+# wordpress + nginx + mysql (mariadb) docker configuration
+Minimal docker wordpress with nginx, mariadb and php-fpm configuration
 
 Your need docker and docker-compose in your operation system.
 

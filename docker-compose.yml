@@ -4,24 +4,50 @@ services:
   nginx:
     image: nginx:stable-alpine
     volumes:
-      - ./wordpress:/var/www
+      - ./wordpress:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d/
     ports:
       - "80:80"
     tty:  true
     restart: unless-stopped
-    container_name: wordpress_nginx
+    container_name: nginx
     depends_on:
-      - app
+      - wordpress
+    networks:
+      - app-network
 
-  app:
-    build:
-      context: .
-      dockerfile: app/Dockerfile
+  wordpress:
+    image: wordpress:beta-php8.1-fpm-alpine
     tty:  true
-    user: 1000:1000
     restart: unless-stopped
     volumes:
-      - ./wordpress:/var/www
-    container_name: app
+      - ./wordpress:/var/www/html
+    container_name: wordpress
+    depends_on:
+      - mariadb
+    networks:
+      - app-network
 
+  mysql:
+    image: yobasystems/alpine-mariadb:latest
+    tty:  true
+    restart: always
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/logs:/var/lib/mysql/mysql-bin
+    environment:
+      MYSQL_ROOT_PASSWORD: hguyFtgfR4r9R4r76
+      MYSQL_DATABASE: wordpressdb
+      MYSQL_USER: wordpressuser
+      MYSQL_PASSWORD: hguyFt6S95dgfR4ryb
+    container_name: mariadb
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

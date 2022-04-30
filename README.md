@@ -7,19 +7,7 @@ Clone: git clone https://github.com/codesshaman/docker_wordpress_mariadb_nginx_p
 
 GO TO FOLDER:
 
-cd docker_wordpress_php_mysql_alpine
-
-GET WORDPRESS:
-
-Get wordpres from official websyte:
-
-wget https://wordpress.org/latest.tar.gz
-
-or use archive from this repository
-
-UNZIP:
-
-tar -xf latest.tar.gz
+cd docker_wordpress_mariadb_nginx_php_alpine
 
 BUILD (first start):
 
@@ -39,3 +27,9 @@ docker exec -it wordpress_nginx sh
 
 OPEN:
 http://localhost/
+
+Docker create folder mysql/data with mariadb data and mysql/logs for mariadb logs
+
+Docker create folder "wordpress" with all wordpress files.
+
+You can change and backup this directories for your needs.

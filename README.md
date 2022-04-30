@@ -34,6 +34,8 @@ Use dbname, username and password from mysql service enviroment in file docker-c
 
 Change this enviroment variables to set your names and password.
 
+Set hostname "mysql" Instead of "localhost" and run wordpress install.
+
 Docker create folder mysql/data with mariadb data and mysql/logs for mariadb logs
 
 Docker create folder "wordpress" with all wordpress files.

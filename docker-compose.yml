@@ -36,10 +36,10 @@ services:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/logs:/var/lib/mysql/mysql-bin
     environment:
-      MYSQL_ROOT_PASSWORD: hguyFtgfR4r9R4r76
-      MYSQL_DATABASE: wordpressdb
-      MYSQL_USER: wordpressuser
-      MYSQL_PASSWORD: hguyFt6S95dgfR4ryb
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     container_name: mariadb
     expose:
       - "3306"

@@ -28,7 +28,7 @@ services:
     networks:
       - app-network
 
-  mysql:
+  mariadb:
     image: yobasystems/alpine-mariadb:latest
     tty:  true
     restart: always
